@@ -7,22 +7,19 @@ class Bill extends Component {
     this.state={
       store:
       [
-        // {bills:"abc"}
-        // {bills:[{name:"a", id:1}, {name:"b", id:2}]},
-      //   {bills:[{name:"aa", id:11}, {name:"bb", id:22}]},
-      //   {bills:[{name:"aaa", id:111}, {name:"bbb", id:222}]}
-      ],
-      billLists:[],
-      test:""
-
+        // {bills:"abc"},
+        {bills:[{name:"a", id:1}, {name:"b", id:2}]},
+        {bills:[{name:"aa", id:11}, {name:"bb", id:22}]},
+        {bills:[{name:"aaa", id:111}, {name:"bbb", id:222}]}
+      ]
     }
   }
 
-  componentDidMount() {
-     fetch('http://localhost:8888/api/getbills')
-       .then(response => response.json())
-       .then(json => this.setState({ store: json }))
-  }
+  // componentDidMount() {
+  //    fetch('http://localhost:8888/api/getbills')
+  //      .then(response => response.json())
+  //      .then(json => this.setState({ store: json }))
+  // }
 
 
   render() {
